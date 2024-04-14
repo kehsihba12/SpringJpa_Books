@@ -15,11 +15,9 @@ public class MyRunner implements CommandLineRunner {
 	
 	
 	public void run(String... args) throws Exception {
-		Books b = new Books();
-		b.setBookId(001);
-		b.setBookName("java");
-		b.setBookPrice(1000.0);
-		repo.save(b);
+		
+		boolean insert = repo.insert();
+		System.out.println(insert);
 		
 
 	}
